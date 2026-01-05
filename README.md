@@ -4,36 +4,36 @@ KantinYuk adalah aplikasi website pemesanan makanan dan minuman berbasis web yan
 
 Proyek ini dibuat untuk:
 
-Menerapkan konsep CRUD (Create, Read, Update, Delete)
-Mengimplementasikan RESTful API
-Memungkinkan integrasi dengan pihak ketiga
-Melatih pemahaman arsitektur web berbasis layanan (service-based architecture)
+1. Menerapkan konsep CRUD (Create, Read, Update, Delete)
+2. Mengimplementasikan RESTful API
+3. Memungkinkan integrasi dengan pihak ketiga
+4. Melatih pemahaman arsitektur web berbasis layanan (service-based architecture)
+
 Teknologi yang Digunakan:
+1. PHP Native
+2. MySQL
+3. HTML, CSS, JavaScript
+4. RESTful API
+5. Talend API Tester (pengujian endpoint API)
+6. Apache (XAMPP / Laragon)
 
-PHP Native
-MySQL
-HTML, CSS, JavaScript
-RESTful API
-Talend API Tester (pengujian endpoint API)
-Apache (XAMPP / Laragon)
 Fitur Aplikasi
-
-Website Menampilkan daftar menu makanan & minuman (READ) Menambahkan item ke keranjang (CREATE) Mengubah jumlah item dalam keranjang (UPDATE) Menghapus item dari keranjang (DELETE) Menampilkan total harga pesanan (READ)
-RESTful API (Keranjang) Menambahkan item ke keranjang Melihat isi keranjang Memperbarui jumlah item Menghapus item dari keranjang Mengosongkan keranjang API ini bisa langsung dipakai untuk:
-Mobile application Sistem kasir Pengujian API Integrasi sistem lain
+1. Website Menampilkan daftar menu makanan & minuman (READ) Menambahkan item ke keranjang (CREATE) Mengubah jumlah item dalam keranjang (UPDATE) Menghapus item dari keranjang (DELETE) Menampilkan total harga pesanan (READ)
+2. RESTful API (Keranjang) Menambahkan item ke keranjang Melihat isi keranjang Memperbarui jumlah item Menghapus item dari keranjang Mengosongkan keranjang API ini bisa langsung dipakai untuk:
+3. Mobile application Sistem kasir Pengujian API Integrasi sistem lain
 Cara Menjalankan Proyek
 
 Clone repository ini
-Pindahkan folder ke direktori server (htdocs atau www)
-Import database MySQL
-Atur koneksi database di file konfigurasi
-Jalankan server Apache & MySQL
-Akses melalui browser
-Pengujian API Gunakan Talend API Tester dengan Endpoint API Base URL: http://localhost/kantinyuenpi/api/keranjang/api_Keranjang.php
+1. Pindahkan folder ke direktori server (htdocs atau www)
+2. Import database MySQL
+3. Atur koneksi database di file konfigurasi
+4. Jalankan server Apache & MySQL
+5. Akses melalui browser
+6, Pengujian API Gunakan Talend API Tester dengan Endpoint API Base URL: http://localhost/kantinyuenpi/api/keranjang/api_Keranjang.php
 
 Tim Pengembang:
 
-Risalatul Haqiqi Fauziyah (2413030004)
-Febrina Firdanatasya (2413030006)
-Delilla Anandita (2413030029)
-Nensa Aulia (2413030056)
+1. Risalatul Haqiqi Fauziyah (2413030004)
+2. Febrina Firdanatasya (2413030006)
+3. Delilla Anandita (2413030029)
+4. Nensa Aulia (2413030056)
