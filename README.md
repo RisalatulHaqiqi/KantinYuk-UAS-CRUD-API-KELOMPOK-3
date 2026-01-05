@@ -1,3 +1,4 @@
+UAS-CRUD-API-KELOMPOK-3
 KantinYuk adalah aplikasi website pemesanan makanan dan minuman berbasis web yang dilengkapi dengan RESTful API. Aplikasi ini memungkinkan pengguna melihat menu, menambahkan item ke keranjang, memperbarui jumlah pesanan, hingga menghapus item dari keranjang. RESTful API disediakan agar pihak eksternal (mobile app, sistem kasir, aplikasi lain, atau tools testing) dapat mengakses dan mengelola data dari sistem KantinYuk. Proyek ini dikembangkan sebagai Project Akhir mata kuliah yang berkaitan dengan pengembangan web dan REST API.
 
 Proyek ini dibuat untuk:
