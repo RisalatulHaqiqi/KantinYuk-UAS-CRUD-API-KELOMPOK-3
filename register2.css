@@ -1,0 +1,221 @@
+/* =========================
+   GLOBAL & BACKGROUND
+========================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  background: url("./img/kantin.jpg") center/cover no-repeat;
+}
+
+/* overlay */
+body::before {
+  content: '';
+  position: absolute;          /* PENTING */
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: -1;
+}
+
+/* =========================
+   NAVBAR (SAMA LOGIN & REGISTER)
+========================= */
+.navbar {
+  position: fixed;             /* FIXED, BUKAN STICKY */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;                /* KUNCI TINGGI */
+  background-color: rgba(46,55,154,0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-title {
+  color: #f5f7ff;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-menu a,
+.back-button {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ddd684;
+  padding: 5px 12px;
+  border-radius: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.back-button:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   CONTAINER UTAMA (LOGIN & REGISTER)
+========================= */
+.register-container {
+  min-height: calc(100vh - 60px); /* 1 layar */
+  margin-top: 60px;              /* OFFSET NAVBAR */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   FORM REGISTER
+========================= */
+.register-form-container {
+  background-color: rgba(46,55,154,0.95);
+  border-radius: 10px;
+  padding: 18px;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ddd684;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* title */
+.register-form-container h1,
+.register-form-container h2 {
+  color: #ffee2e;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   FORM GRID (2 KOLOM)
+========================= */
+.form-horizontal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-horizontal-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-horizontal-group {
+  flex: 1;
+}
+
+/* =========================
+   FORM INPUT (DISAMAKAN DENGAN LOGIN)
+========================= */
+label {
+  display: block;
+  color: #ffee2e;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-input {
+  width: 100%;
+  height: 34px;
+  padding: 8px 12px;
+  border-radius: 30px;
+  border: 1px solid #ffee2e;
+  font-size: 13px;             /* SAMA LOGIN */
+  color: #005555;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  font-size: 13px;             /* SAMA LOGIN */
+  font-style: normal;
+  color: #999;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #005555;
+  box-shadow: 0 0 0 2px rgba(107,20,218,0.2);
+}
+
+/* =========================
+   SEPARATOR
+========================= */
+.separator {
+  width: 100%;
+  height: 1px;
+  background: rgba(107,20,218,0.3);
+  margin: 12px 0;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.register-button {
+  width: 180px;
+  height: 36px;
+  background-color: #ddd684;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-button:hover {
+  background-color: #ffee2e;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .form-horizontal-row {
+    flex-direction: column;
+  }
+
+  .register-form-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-title {
+    font-size: 14px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

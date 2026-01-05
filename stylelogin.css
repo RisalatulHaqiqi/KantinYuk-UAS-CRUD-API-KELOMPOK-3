@@ -1,0 +1,283 @@
+body {
+  background-image: url("./img/kantin.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255, 139, 13, 0.95);
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid #6b14da;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background-color: #6b14da;
+  padding: 8px 20px;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background-color: #5a12c0;
+  transform: translateX(-5px);
+}
+
+.back-icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.nav-title {
+  color: #005555;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  background-color: #6b14da;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: #5a12c0;
+  transform: translateY(-2px);
+}
+
+/* Main container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+}
+
+/* Login Form Container */
+.form-container {
+  background-color: rgba(255, 139, 13, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 3px solid #6b14da;
+}
+
+/* Logo Section */
+.logo-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.welcome-text h2 {
+  color: #005555;
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.welcome-text p {
+  color: #005555;
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Form Styling */
+.login-form {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  color: #005555;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #6b14da;
+  background-color: white;
+  border-radius: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #005555;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #005555;
+  box-shadow: 0 0 0 3px rgba(107, 20, 218, 0.2);
+}
+
+.login-button {
+  width: 100%;
+  padding: 16px;
+  background-color: #6b14da;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background-color: #5a12c0;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Register Link */
+.register-section {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px dashed rgba(107, 20, 218, 0.3);
+}
+
+.register-text {
+  color: #005555;
+  font-size: 16px;
+  margin: 0;
+}
+
+.register-link {
+  color: #6b14da;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.register-link:hover {
+  color: #5a12c0;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-menu {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .form-container {
+    width: 90%;
+    padding: 30px 25px;
+  }
+  
+  .welcome-text h2 {
+    font-size: 24px;
+  }
+  
+  .welcome-text p {
+    font-size: 16px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .nav-menu a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .form-container {
+    padding: 25px 20px;
+  }
+  
+  .form-input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .login-button {
+    padding: 14px;
+    font-size: 16px;
+  }
+}

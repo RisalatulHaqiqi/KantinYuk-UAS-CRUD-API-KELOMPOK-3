@@ -1,0 +1,191 @@
+body {
+  background-image: url("./img/Makanan-Khas-Daerah-tiap-Provinsi-di-Indonesia-Serta-Daerah-Asalnya.jpg");
+  margin: 0; /* Remove default body margin */
+  box-sizing: border-box; /* Include padding in total width/height */
+  font-family: "Lato", "Poppins";
+  color: antiquewhite;
+  height: 110vh;
+}
+
+.kartuu {
+  width: 80rem;
+  height: 22rem;
+  background-color: #ff8b0d;
+  margin: 0 auto;
+  font-weight: 600;
+  padding: 1px 14px 18px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  line-height: 1px;
+}
+
+.tombol {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.tombol a {
+  padding: 5px 11px;
+  width: 64px;
+  height: 28px;
+  background-color: #6b14da;
+  border-radius: 20px;
+  border: none;
+  font-family: poppins;
+  text-decoration: none;
+  color: white;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer_section {
+  margin-top: 54px;
+  background: #6b14da;
+  padding: 34px;
+  font-family: "Lato", "poppins";
+  color: white;
+  height: 36vh;
+}
+
+.footer__container {
+  display: inline-flex;
+  gap: 30px;
+  margin-left: 140px;
+}
+
+.footer__copy {
+  margin-top: 51px;
+  text-align: center;
+  color: white;
+}
+
+.footer__input {
+  width: 70%;
+  padding: 0 0.5rem;
+  background: none;
+  color: white;
+  border: none;
+  outline: none;
+}
+.footer__subscribe {
+  background-color: #ac87c5;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  gap: 10px;
+}
+
+.footer__input {
+  width: 70%;
+  padding: 0 0.5rem;
+  background: none;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.buttons {
+  background-color: #ff8b0d;
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  width: 92px;
+  height: 34px;
+  border: none;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.footer__buttons {
+  padding: 1rem;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: var(--mb-2-5);
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: xx-large;
+}
+
+.footer__data {
+  display: grid;
+  row-gap: 0.75rem;
+  margin-left: -39px;
+}
+
+.footer__title {
+  font-size: large;
+  margin-bottom: 10px;
+}
+
+.footer__content ul {
+  list-style: none;
+}
+
+.footer__cards {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.footer__card {
+  width: 35px;
+}
+@media (max-width: 480px) {
+  h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .kartuu {
+    width: 18rem;
+    height: 74rem;
+    background-color: #ff8b0d;
+    margin: 0 auto;
+    font-weight: 600;
+    padding: 1px 14px 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer_section {
+    margin-top: 3rem;
+    background: #6b14da;
+    padding: 34px;
+    font-family: "Lato", "poppins";
+    color: white;
+    height: 75vh;
+    max-width: 87%;
+  }
+
+  .footer__subscribe {
+    background-color: #ac87c5;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    gap: 10px;
+  }
+  .footer__container {
+    display: inline;
+    gap: 30px;
+    margin-left: 140px;
+  }
+}

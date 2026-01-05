@@ -1,0 +1,1351 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Lato", "poppins";
+}
+
+body {
+  /* Background awal dengan gambar */
+  background-image: url("./img/kantin.jpg");
+  background-size: cover; /* Menutupi seluruh area */
+  background-position: center;
+  background-attachment: fixed; /* Background tetap saat scroll */
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Overlay untuk membuat background gambar lebih soft */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Overlay gelap transparan */
+  z-index: -1;
+}
+
+
+body.dark-mode .main-content {
+  background-color: rgba(30, 30, 30, 0.95);
+}
+
+/* ======================================================= DarkMode ================================================= */
+body.dark-mode {
+  background-color: #333; /* Latar belakang hitam */
+  color: #fff; /* Warna teks putih */
+  transition: background-color 0.5s, color 0.2s;
+}
+
+body.dark-mode::before {
+  background: rgba(0, 0, 0, 0.6); /* Overlay lebih gelap di dark mode */
+}
+
+body.dark-mode.scrolled {
+  background-color: #1a1a1a !important; /* Warna lebih gelap saat scroll di dark mode */
+}
+
+body.dark-mode .Menu p {
+  color: white;
+}
+
+body.dark-mode .Menu1 p {
+  color: white;
+}
+
+body.dark-mode .navbar {
+  background-color: rgba(51, 51, 51, 0.95); /* Latar belakang hitam dengan transparansi */
+  color: #fff; /* Warna teks putih */
+  transition: background-color 0.3s, color 0.2s;
+}
+
+body.dark-mode .namakategori p {
+  color: #fff; /* Warna teks putih */
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 19px;
+}
+
+.bar {
+  background-color: rgba(46, 55, 154, 0.95);
+  height: 32px;
+  margin-top: 6px;
+  font-family: poppins;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.bar marquee {
+  margin-top: 4px;
+}
+
+/* Navbar yang akan berubah saat scroll */
+.navbar {
+  background-color: rgba(255, 139, 13, 0.95); /* Default color with transparency */
+  transition: all 0.3s ease;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 139, 13, 0.98); /* Warna lebih solid saat scroll */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .navbar.scrolled {
+  background-color: rgba(51, 51, 51, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Container untuk mengatur layout konten */
+
+
+body.dark-mode .container {
+  background-color: rgba(40, 40, 40, 0.9);
+  color: #f0f0f0;
+}
+
+/* Section styling */
+.section {
+  padding: 60px 20px;
+  margin: 40px 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .section {
+  background-color: rgba(45, 45, 45, 0.95);
+}
+
+/* Untuk memastikan gambar tidak zoom pada mobile */
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    padding: 15px;
+    margin-top: 15px;
+  }
+  
+  .section {
+    padding: 40px 15px;
+  }
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 44px;
+  padding-right: 116px;
+  padding-top: 6px;
+}
+
+.nav-list1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 44px;
+  padding-right: 116px;
+  padding-top: 6px;
+  display: none;
+}
+
+.nav-list1 li {
+  margin-right: 15px;
+}
+
+.nav-list li {
+  margin-right: 15px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #ffee2e;
+}
+
+header {
+  background-color: #ffee2e;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: poppins;
+  background-color: rgba(46, 55, 154, 0.95);
+  width: 100%;
+  height: 66px;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, color 0.2s;
+}
+/* ===== KATEGORI SECTION WITH PLAIN BACKGROUND ===== */
+/* Reset margin dan padding untuk seluruh elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Hero/Image Section tanpa margin */
+.image-section {
+    width: 100vw;
+    height: 100vh; /* Sesuaikan tinggi gambar */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar menutupi area tanpa distorsi */
+    display: block;
+}
+
+/* Transition effect untuk smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Kategori Section dengan efek transisi yang lebih smooth */
+.Kategori-section {
+    background: #f8f9fa; /* Warna background polos abu-abu muda */
+    padding: 2rem 1rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-top: 0; /* Pastikan tidak ada margin atas */
+    opacity: 0; /* Awalnya transparan untuk animasi */
+    transform: translateY(50px); /* Awalnya sedikit di bawah */
+    animation: fadeInUp 1s ease-out 0.3s forwards; /* Animasi masuk */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Kategori-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.Kategori-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+}
+
+.Kategori-title h2 {
+    font-size: 2.8rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #6b14da, #ff8b0d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.Kategori-title p {
+    color: #666;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+/* Kategori Cards dengan staggered animation */
+.Kategori-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out 0.7s forwards;
+}
+
+.Kategori-card {
+    background: white;
+    border-radius: 25px;
+    padding: 3.5rem 2.5rem;
+    width: 350px;
+    box-shadow: 0 15px 35px rgba(107, 20, 218, 0.08);
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transform-origin: center;
+    opacity: 0;
+    animation: cardFadeIn 0.6s ease-out forwards;
+    animation-delay: calc(var(--card-index) * 0.1s);
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.Kategori-card:nth-child(1) { --card-index: 1; }
+.Kategori-card:nth-child(2) { --card-index: 2; }
+.Kategori-card:nth-child(3) { --card-index: 3; }
+
+/* Gradient border effect */
+.Kategori-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #6b14da, #4d96ff, #ff8b0d);
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+    background-position: 0% 0%;
+}
+
+.Kategori-card:hover::before {
+    background-position: 100% 0%;
+}
+
+/* Hover effect yang lebih dramatik */
+.Kategori-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(107, 20, 218, 0.15);
+    border-color: #6b14da;
+}
+
+/* Ikon untuk kategori dengan animasi */
+.Kategori-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    background: linear-gradient(135deg, #6b14da, #4d96ff);
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.Kategori-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ff8b0d, #ff6b0d);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.Kategori-card:hover .Kategori-icon::before {
+    opacity: 1;
+}
+
+.Kategori-card:hover .Kategori-icon {
+    transform: rotateY(180deg) scale(1.1);
+}
+
+/* Konten dalam card */
+.Kategori-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.Kategori-card:hover h3 {
+    color: #6b14da;
+}
+
+.Kategori-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Tombol dalam card */
+.Kategori-card .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #6b14da, #4d96ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Kategori-card .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #ff8b0d, #ff6b0d);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.Kategori-card .btn:hover::before {
+    opacity: 1;
+}
+
+.Kategori-card .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(107, 20, 218, 0.2);
+}
+
+/* Floating particles effect */
+.Kategori-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(107, 20, 218, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 139, 13, 0.05) 0%, transparent 20%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.Kategori-section.active::before {
+    opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .Kategori-grid {
+        gap: 2rem;
+    }
+    
+    .Kategori-card {
+        width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Kategori-section {
+        padding: 3rem 1rem;
+    }
+    
+    .Kategori-title h2 {
+        font-size: 2.2rem;
+    }
+    
+    .Kategori-grid {
+        gap: 1.5rem;
+    }
+    
+    .Kategori-card {
+        width: 100%;
+        max-width: 400px;
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Kategori-section {
+        padding: 2rem 1rem;
+    }
+    
+    .Kategori-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .Kategori-title p {
+        font-size: 1rem;
+    }
+    
+    .Kategori-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .Kategori-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+}laaatbes {
+  border-radius: 100%;
+  background: rgba(46, 55, 154, 0.95);
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  line-height: 0.4;
+  margin-top: 18em;
+  margin-left: 2rem;
+}
+
+.Kategori img {
+  width: 67%;
+  margin-left: 30px;
+  height: 128px;
+  margin-top: 27px;
+}
+.Kategori .bulaaatbes:hover {
+  transform: scale(0.8);
+  transition: 1s;
+}
+.Menu {
+  margin-top: 14rem;
+  text-align: center;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  gap: 76px;
+  justify-content: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.text-in-image {
+  text-align: center;
+  color: white;
+}
+.text-in-image img {
+  width: 100%;
+  height: 105vh;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-top: -30px;
+}
+.kalimat p {
+  font-family: Poppins;
+  font-size: x-large;
+  margin-top: -24rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  font-family: poppins;
+  color: #fff;
+  padding: 4px 36px;
+  background: linear-gradient(90deg, #6616d0, #ac34e7);
+  border-radius: 45px;
+  margin: 10px;
+  font-size: 27px;
+  font-weight: 400;
+  text-decoration: none;
+  box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.Menu p {
+  font-size: 27px;
+  font-weight: 400;
+  font-family: poppins;
+  text-shadow: none;
+  color: #333;
+  padding-top: 6.5%;
+  padding-left: 12px;
+}
+
+.Menu1 p {
+  font-size: 27px;
+  font-weight: 200;
+  font-family: poppins;
+  text-shadow: none;
+  color: #333;
+  margin-bottom: 1px;
+  margin-left: 10px;
+}
+.Menumakan {
+  font-size: 26px;
+  font-weight: 400;
+  font-family: poppins;
+  text-shadow: none;
+  color: #333;
+  padding-left: 12px;
+}
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-btn {
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* card slider */
+
+.slider-container {
+  overflow: hidden;
+  display: inline-flex;
+  /* Ensure overflow is hidden for the slider effect */
+}
+.slider-container1 {
+  overflow: hidden;
+  display: inline-flex;
+  margin: 12px;
+  /* Ensure overflow is hidden for the slider effect */
+}
+
+.card-slider {
+  display: inline-flex;
+  transition: transform 0.5s ease;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-left: 16px;
+  /*
+  
+   Add smooth transition for slider effect */
+}
+
+.card-slider1 {
+  display: inline-flex;
+  transition: transform 0.5s ease;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-left: 16px;
+  /*
+  
+   Add smooth transition for slider effect */
+}
+
+.card {
+  background: rgba(46, 55, 154, 0.95);
+  box-sizing: border-box; 
+  padding: 15px; 
+  text-align: center; 
+  border: 2px solid rgba(46, 55, 154, 0.95);
+  border-radius: 20px;
+  width: 184px;
+  height: 270px;
+  overflow: hidden;
+  line-height: 0.4;
+}
+button:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.cardmenu {
+  background: rgba(46, 55, 154, 0.95);
+  box-sizing: border-box; 
+  padding: 15px; 
+  text-align: center; 
+  border: 2px solid rgba(46, 55, 154, 0.95);
+  border-radius: 100px 100px 20px 20px;
+  width: 184px;
+  height: 277px;
+  overflow: hidden;
+  line-height: 0.2;
+}
+
+.cardmenu p {
+  padding: 0 0 2px 0px;
+  font-size: medium;
+  font-weight: 700;
+  color: white;
+}
+
+.card img {
+  width: 123%;
+  margin-left: -18px;
+  height: 159px;
+  margin-top: -17px;
+}
+
+.card p {
+  padding: 0 0 2px 0px;
+  font-size: medium;
+  font-weight: 700;
+  color: white;
+}
+
+.card1 {
+  background: rgba(46, 55, 154, 0.95);
+  box-sizing: border-box; 
+  padding: 15px; 
+  text-align: center; 
+  border: 2px solid rgba(46, 55, 154, 0.95);
+  border-radius: 20px;
+  width: 184px;
+  overflow: hidden;
+  line-height: 1.2;
+  margin-right: 10px;
+}
+
+.card1 img {
+  width: 123%;
+  margin-left: -18px;
+  height: 159px;
+  margin-top: -17px;
+}
+
+.card1 p {
+  padding: 0 0 2px 0px;
+  font-size: medium;
+  font-weight: 700;
+  color: white;
+}
+
+button {
+  width: 100px;
+  height: 33px;
+  background-color: #6b14da;
+  border-radius: 20px;
+  border: none;
+  font-family: poppins;
+  color: White;
+  font-size: larger;
+}
+
+.Menu1 .buttonnn {
+  width: 200px;
+  height: 50px;
+  background-color: #6b14da;
+  border-radius: 20px;
+  border: none;
+  font-family: poppins;
+  color: #fff;
+  font-size: larger;
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 6px;
+  box-shadow: 2px 4px rgba(218, 25, 25, 0.1);
+}
+.tombol {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.tombol a {
+  padding: 5px 11px;
+  width: 64px;
+  height: 28px;
+  background-color: #6b14da;
+  border-radius: 20px;
+  border: none;
+  font-family: poppins;
+  text-decoration: none;
+  color: white;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+}
+.bulat {
+  width: 150px;
+  height: 150px;
+  background-color: #6b14da;
+  border-radius: 150px;
+}
+
+.bulat img {
+  width: 80px;
+  height: 80px;
+  margin-top: 32px;
+}
+
+input[type="submit"] {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: #6b14da;
+  color: white;
+}
+input[type="number"] {
+  width: 31px;
+  height: 25px;
+  border-radius: 10px;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #6b14da;
+  padding: 8px;
+  text-align: left;
+  background-color: rgba(46, 55, 154, 0.95);
+  color: white;
+}
+
+th {
+  background-color: #6b14da;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+/* Footer */
+.footer_section {
+  margin-top: -1px;
+  background: rgba(46, 55, 154, 0.95);
+  padding: 34px;
+  font-family: "Lato", "poppins";
+  color: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__copy {
+  margin-top: 51px;
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer__input {
+  width: 70%;
+  padding: 0 0.5rem;
+  background: none;
+  color: white;
+  border: none;
+  outline: none;
+}
+.footer__subscribe {
+  background-color: #ac87c5;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  gap: 10px;
+}
+
+.footer__input {
+  width: 70%;
+  padding: 0 0.5rem;
+  background: none;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.buttons {
+  background-color: rgba(46, 55, 154, 0.95);
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  width: 121px;
+}
+
+.footer__buttons {
+  padding: 1rem;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: var(--mb-2-5);
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: xx-large;
+  justify-content: flex-start;
+}
+
+.footer__data {
+  display: grid;
+  row-gap: 0.75rem;
+  margin-left: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.footer__title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: white;
+  border-bottom: 2px solid rgba(46, 55, 154, 0.95);
+  padding-bottom: 8px;
+}
+
+.footer__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__cards {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.footer__card {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.footer__cards a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__cards a:hover .footer__card {
+  transform: scale(1.15);
+}
+
+.footer__card:hover {
+  transform: scale(1.1);
+}
+
+
+/* Responsive design for footer */
+@media (max-width: 992px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .footer__content {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .footer__logo {
+    justify-content: center;
+  }
+  
+  .footer__cards {
+    justify-content: center;
+  }
+  
+  .footer__social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-behavior: smooth;
+    font-family: "Lato", "poppins";
+  }
+
+  body {
+    height: 80vh;
+    font-family: "Lato", "poppins";
+    margin: 0;
+    background-color: #b6c4b6;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  .logo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: -8px;
+    padding-right: 11px;
+  }
+
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 0px;
+    padding-right: 111px;
+    padding-top: 6px;
+    margin-left: 30px;
+    display: none;
+  }
+  .nav-list1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 13px;
+    padding-right: 37px;
+    padding-top: 6px;
+    padding-left: 1rem;
+  }
+
+  .nav-list1 li {
+    margin-right: 15px;
+    /* display: none; */
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: poppins;
+    background-color: rgba(46, 55, 154, 0.95);
+    width: 100%;
+    height: 66px;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .bar {
+    background-color: rgba(46, 55, 154, 0.95);
+    height: 32px;
+    margin-top: 6px;
+    font-family: poppins;
+    color: #fff;
+  }
+
+  .text-in-image {
+    text-align: center;
+    color: white;
+    padding-top: 5rem;
+  }
+  .text-in-image img {
+    width: 100%;
+    height: 32vh;
+    background-size: auto;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    margin-top: -30px;
+  }
+
+  .kalimat p {
+    font-family: Poppins;
+    font-size: large;
+    margin-top: -11rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .button {
+    position: relative;
+    display: inline-block;
+    font-family: poppins;
+    color: #fff;
+    padding: 4px 23px;
+    background: linear-gradient(90deg, #6616d0, #ac34e7);
+    border-radius: 45px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .Menu {
+    margin-top: 8rem;
+  }
+  .Menu p {
+    font-size: 23px;
+    font-weight: 400;
+    font-family: poppins;
+    text-shadow: none;
+    color: #333;
+    padding-left: 18px;
+    margin-top: -5rem;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 0;
+    align-items: center;
+  }
+  .card-slider {
+    display: inline-flex;
+    transition: transform 0.5s ease;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 19px;
+  }
+
+  .card {
+    background: rgba(46, 55, 154, 0.95);
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid rgba(46, 55, 154, 0.95);
+    border-radius: 20px;
+    width: 132px;
+    height: 270px;
+    overflow: hidden;
+    /* line-height: 0.4; */
+  }
+  .Menu1 p {
+    font-size: 23px;
+    font-weight: 200;
+    font-family: poppins;
+    text-shadow: none;
+    color: #333;
+    margin-bottom: 1px;
+    margin-left: 22px;
+  }
+
+  .Menu1 .buttonnn {
+    width: 200px;
+    height: 50px;
+    background-color: #6b14da;
+    border-radius: 20px;
+    border: none;
+    font-family: poppins;
+    color: #fff;
+    font-size: larger;
+    margin-left: 22px;
+    text-decoration: none;
+    padding: 6px;
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider-container1 {
+    overflow: hidden;
+    display: inline-flex;
+    margin: 3px;
+    margin-left: 1px;
+  }
+  .card1 {
+    background: rgba(46, 55, 154, 0.95);
+    box-sizing: border-box;
+    padding: 8px;
+    text-align: center;
+    border: 2px solid rgba(46, 55, 154, 0.95);
+    border-radius: 20px;
+    width: 137px;
+    overflow: hidden;
+    line-height: 1.2;
+    margin-right: 3px;
+    margin-left: 8px;
+  }
+  .slider-container1 {
+    overflow: hidden;
+    display: inline-flex;
+    margin: 7px;
+    margin-left: 11px;
+  }
+
+  .cardmenu {
+    background: rgba(46, 55, 154, 0.95);
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid rgba(46, 55, 154, 0.95);
+    border-radius: 100px 100px 20px 20px;
+    width: 136px;
+    height: 237px;
+    overflow: hidden;
+    line-height: 0.2;
+  }
+
+  .bulat {
+    width: 108px;
+    height: 110px;
+    background-color: #6b14da;
+    border-radius: 150px;
+  }
+  .card-slider1 {
+    display: inline-flex;
+    transition: transform 0.5s ease;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-left: 37px;
+  }
+  .bulat img {
+    width: 50px;
+    height: 50px;
+    margin-top: 32px;
+  }
+
+  .footer_section {
+    margin-top: -2px;
+    background: rgba(46, 55, 154, 0.95);
+    padding: 20px;
+    font-family: "Lato", "poppins";
+    color: white;
+    height: auto;
+  }
+  .footer__subscribe {
+    background-color: #ac87c5;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    gap: 10px;
+  }
+  .buttons {
+    background-color: rgba(46, 55, 154, 0.95);
+    color: #fff;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    width: 112px;
+  }
+  
+  .footer__data {
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .footer__cards {
+    justify-content: center;
+  }
+}
+/* Styling untuk teks di bawah KantinYuk */
+.footer__tagline {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px; /* Memberi jarak sedikit dari tulisan KantinYuk */
+    font-style: italic; /* Membuat teks miring agar terlihat manis */
+    line-height: 1.5;
+    max-width: 250px; /* Membatasi lebar agar teks turun ke bawah jika terlalu panjang */
+}
+
+/* ================== FONT SCALE FIX - KATEGORI MENU ================== */
+
+/* Judul section kategori */
+.Kategori-title h2 {
+  font-size: 2.2rem; /* sebelumnya 2.8rem */
+}
+
+/* Deskripsi di bawah judul */
+.Kategori-title p {
+  font-size: 1rem; /* sebelumnya 1.2rem */
+}
+
+/* Judul tiap card */
+.Kategori-card h3 {
+  font-size: 1.4rem; /* sebelumnya 1.8rem */
+}
+
+/* Deskripsi tiap card */
+.Kategori-card p {
+  font-size: 0.9rem; /* sebelumnya 1rem */
+  line-height: 1.4;
+}
+
+/* Tombol di card */
+.Kategori-card .btn {
+  font-size: 0.9rem;
+  padding: 10px 24px;
+}

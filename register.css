@@ -1,0 +1,573 @@
+body {
+  background-image: url("./img/kantin.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Overlay untuk membuat background gambar lebih soft */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Overlay gelap transparan */
+  z-index: -1;
+}
+
+/* Navbar -  */
+.navbar {
+  background-color: rgba(46, 55, 154, 0.95);
+  padding: 8px 15px;  
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);  
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #ddd684;  
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background-color: #ddd684;
+  padding: 5px 12px;  
+  border-radius: 18px;  
+  transition: all 0.3s;
+  font-size: 12px;  
+}
+
+.back-button:hover {
+  background-color: #ddd684;
+  transform: translateX(-2px);  
+}
+
+.back-icon {
+  margin-right: 5px;  
+  font-size: 14px;  
+}
+
+.nav-title {
+  color: #f5f7ff;
+  font-size: 18px;  
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 8px;  
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 12px;  
+  border-radius: 18px;  
+  background-color: #ddd684;
+  font-weight: 600;
+  transition: all 0.3s;
+  font-size: 12px;  
+}
+
+.nav-menu a:hover {
+  background-color: #ddd684;
+  transform: translateY(-1px);
+}
+
+
+/* ===== HEADER TITLE ===== - DIKECILKAN LAGI */
+.header-title {
+    text-align: center;
+    margin: 15px 0 10px 0; /* Dikecilkan lagi */
+    padding: 0 15px;
+}
+
+.header-title h1 {
+    color: #ffffff;
+    font-size: 20px; /* Dikecilkan lagi */
+    font-weight: bold;
+    margin-bottom: 5px; /* Dikecilkan lagi */
+    text-shadow: 1px 1px 2px #ffffff;
+}
+
+.header-title h2 {
+    color: #ffffff;
+    font-size: 16px; /* Dikecilkan lagi */
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ===== register/REGISTER PAGE ===== - DIKECILKAN LAGI */
+.register-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 15px 15px 15px; /* Dikecilkan lagi */
+    width: 100%;
+}
+
+.register-form-container {
+    background-color:rgba(46, 55, 154, 0.95);
+    border-radius: 8px; /* Dikecilkan lagi */
+    padding: 15px; /* Dikecilkan lagi */
+    width: 100%;
+    max-width: 600px; /* Dikecilkan lagi */
+    min-height: auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Dikecilkan lagi */
+    border: 1px solid #ddd684;
+    margin-top: 10px; /* Dikecilkan lagi */
+}
+.register-form-container h1,
+.register-form-container h2,
+.register-form-container .title,
+.register-form-container .form-title {
+    color: #ffee2e;
+}
+.register-form {
+    width: 100%;
+}
+
+/* FORM KANAN-KIRI YANG BENAR - DIKECILKAN LAGI */
+.form-horizontal-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+}
+
+/* Setiap baris form - DIKECILKAN LAGI */
+.form-horizontal-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px; /* Dikecilkan lagi */
+}
+
+/* Setiap form group dalam baris - DIKECILKAN LAGI */
+.form-horizontal-group {
+    flex: 1;
+    padding: 0 8px; /* Dikecilkan lagi */
+}
+
+/* Baris pertama: Email (kiri) dan Username (kanan) - DIKECILKAN LAGI */
+.form-horizontal-row:nth-child(1) .form-horizontal-group:first-child {
+    padding-left: 0;
+    padding-right: 12px; /* Dikecilkan lagi */
+}
+
+.form-horizontal-row:nth-child(1) .form-horizontal-group:last-child {
+    padding-left: 12px; /* Dikecilkan lagi */
+    padding-right: 0;
+}
+
+/* Baris kedua: Mobile (kiri) dan Password (kanan) - DIKECILKAN LAGI */
+.form-horizontal-row:nth-child(2) .form-horizontal-group:first-child {
+    padding-left: 0;
+    padding-right: 12px; /* Dikecilkan lagi */
+}
+
+.form-horizontal-row:nth-child(2) .form-horizontal-group:last-child {
+    padding-left: 12px; /* Dikecilkan lagi */
+    padding-right: 0;
+}
+
+/* Baris ketiga: Confirm Password (tengah) - DIKECILKAN LAGI */
+.form-horizontal-row:nth-child(3) {
+    padding-left: 0;
+    padding-right: 12px; /* Dikecilkan lagi */
+}
+
+.form-horizontal-row:nth-child(3) .form-horizontal-group {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.register-form label {
+    display: block;
+    color: #ffee2e;
+    font-weight: 600;
+    margin-bottom: 5px; /* Dikecilkan lagi */
+    font-size: 11px; /* Dikecilkan lagi */
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 6px 10px; /* Dikecilkan lagi */
+    border: 1px solid #6b14da;
+    background-color: white;
+    border-radius: 20px; /* Dikecilkan lagi */
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px; /* Dikecilkan lagi */
+    color: #005555;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    height: 30px; /* Fixed height */
+}
+
+.form-input::placeholder {
+    color: #999;
+    font-style: italic;
+    font-size: 10px; /* Dikecilkan lagi */
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #005555;
+    box-shadow: 0 0 0 1px rgba(107, 20, 218, 0.2); /* Dikecilkan lagi */
+    background-color: #f8f8f8;
+}
+
+/* Separator Line - DIKECILKAN LAGI */
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(107, 20, 218, 0.3);
+    margin: 12px 0; /* Dikecilkan lagi */
+    border: none;
+}
+
+/* Button Container - DIKECILKAN LAGI */
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* Dikecilkan lagi */
+    margin-top: 10px; /* Dikecilkan lagi */
+    margin-bottom: 5px;
+}
+
+.register-button {
+    width: 40%;
+    max-width: 180px; /* Dikecilkan lagi */
+    padding: 8px; /* Dikecilkan lagi */
+    background-color: #ddd684;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Dikecilkan lagi */
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px; /* Dikecilkan lagi */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(107, 20, 218, 0.2); /* Dikecilkan lagi */
+    height: 32px; /* Fixed height */
+}
+
+.register-button:hover {
+    background-color: #ffee2e;
+    transform: translateY(-1px); /* Dikecilkan lagi */
+    box-shadow: 0 3px 8px rgba(107, 20, 218, 0.3); /* Dikecilkan lagi */
+}
+
+.register-button:active {
+    transform: translateY(0);
+}
+
+/* ===== MESSAGE STYLES ===== - DIKECILKAN LAGI */
+.message {
+    text-align: center;
+    margin-top: 10px; /* Dikecilkan lagi */
+    padding: 8px 10px; /* Dikecilkan lagi */
+    border-radius: 6px; /* Dikecilkan lagi */
+    font-weight: 600;
+    width: 100%;
+    font-size: 10px; /* Dikecilkan lagi */
+}
+
+.message.success {
+    background-color: rgba(0, 85, 85, 0.15);
+    color: #005555;
+    border: 1px solid #005555;
+}
+
+.message.error {
+    background-color: rgba(218, 20, 107, 0.15);
+    color: #da146b;
+    border: 1px solid #da146b;
+}
+
+/* ===== RESPONSIVE DESIGN ===== - DIKECILKAN LAGI */
+@media only screen and (max-width: 900px) {
+    .register-form-container {
+        max-width: 95%;
+        padding: 12px 10px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-row:nth-child(1) .form-horizontal-group:first-child,
+    .form-horizontal-row:nth-child(1) .form-horizontal-group:last-child,
+    .form-horizontal-row:nth-child(2) .form-horizontal-group:first-child,
+    .form-horizontal-row:nth-child(2) .form-horizontal-group:last-child {
+        padding: 0 6px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-row:nth-child(3) .form-horizontal-group {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    
+    .register-button {
+        width: 50%;
+        padding: 7px; /* Dikecilkan lagi */
+        font-size: 11px; /* Dikecilkan lagi */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 4px 8px; /* Dikecilkan lagi */
+        height: 35px; /* Dikecilkan lagi */
+    }
+    
+    .nav-container {
+        gap: 5px; /* Dikecilkan lagi */
+    }
+    
+    .header-title {
+        margin: 10px 0 8px 0; /* Dikecilkan lagi */
+    }
+    
+    .header-title h1 {
+        font-size: 18px; /* Dikecilkan lagi */
+    }
+    
+    .header-title h2 {
+        font-size: 14px; /* Dikecilkan lagi */
+    }
+    
+    .register-form-container {
+        padding: 12px 10px; /* Dikecilkan lagi */
+        margin-top: 8px;
+        border-radius: 6px; /* Dikecilkan lagi */
+    }
+    
+    /* Di mobile jadi 1 kolom */
+    .form-horizontal-row {
+        flex-direction: column;
+        margin-bottom: 8px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-group {
+        padding: 0 !important;
+        margin-bottom: 10px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-row:nth-child(3) .form-horizontal-group {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .form-input {
+        padding: 6px 8px; /* Dikecilkan lagi */
+        font-size: 10px; /* Dikecilkan lagi */
+        height: 28px; /* Dikecilkan lagi */
+    }
+    
+    .register-button {
+        width: 60%;
+        padding: 7px; /* Dikecilkan lagi */
+        font-size: 11px; /* Dikecilkan lagi */
+        height: 28px; /* Dikecilkan lagi */
+    }
+    
+    .separator {
+        margin: 10px 0; /* Dikecilkan lagi */
+    }
+    
+    .back-button {
+        height: 22px; /* Dikecilkan lagi */
+    }
+    
+    .nav-menu a {
+        height: 22px; /* Dikecilkan lagi */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar {
+        padding: 3px 6px; /* Dikecilkan lagi */
+        height: 32px; /* Dikecilkan lagi */
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px; /* Dikecilkan lagi */
+    }
+    
+    .nav-menu a {
+        width: 100%;
+        text-align: center;
+        padding: 2px 6px; /* Dikecilkan lagi */
+        font-size: 9px; /* Dikecilkan lagi */
+        height: 20px; /* Dikecilkan lagi */
+    }
+    
+    .header-title {
+        margin: 8px 0 6px 0; /* Dikecilkan lagi */
+    }
+    
+    .header-title h1 {
+        font-size: 16px; /* Dikecilkan lagi */
+    }
+    
+    .header-title h2 {
+        font-size: 12px; /* Dikecilkan lagi */
+    }
+    
+    .register-form-container {
+        padding: 10px 8px; /* Dikecilkan lagi */
+        margin-top: 6px; /* Dikecilkan lagi */
+        border-radius: 5px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-group {
+        margin-bottom: 6px; /* Dikecilkan lagi */
+    }
+    
+    .form-input {
+        padding: 5px 8px; /* Dikecilkan lagi */
+        font-size: 10px; /* Dikecilkan lagi */
+        border-radius: 15px; /* Dikecilkan lagi */
+        height: 26px; /* Dikecilkan lagi */
+    }
+    
+    .register-button {
+        width: 70%;
+        padding: 6px; /* Dikecilkan lagi */
+        font-size: 10px; /* Dikecilkan lagi */
+        height: 26px; /* Dikecilkan lagi */
+    }
+    
+    .back-home-link {
+        padding: 5px 10px; /* Dikecilkan lagi */
+        font-size: 9px; /* Dikecilkan lagi */
+        height: 22px; /* Dikecilkan lagi */
+    }
+    
+    .separator {
+        margin: 8px 0; /* Dikecilkan lagi */
+    }
+    
+    .back-button {
+        padding: 2px 6px; /* Dikecilkan lagi */
+        font-size: 9px; /* Dikecilkan lagi */
+        height: 20px; /* Dikecilkan lagi */
+    }
+    
+    .nav-title {
+        font-size: 12px; /* Dikecilkan lagi */
+    }
+    
+    .back-icon {
+        font-size: 9px; /* Dikecilkan lagi */
+    }
+}
+
+/* Untuk layar sangat kecil (mobile landscape) */
+@media only screen and (max-height: 400px) {
+    .register-container {
+        padding: 0 10px 10px 10px; /* Dikecilkan lagi */
+    }
+    
+    .register-form-container {
+        padding: 8px; /* Dikecilkan lagi */
+    }
+    
+    .header-title {
+        margin: 8px 0 5px 0; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-row {
+        margin-bottom: 6px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-group {
+        margin-bottom: 6px; /* Dikecilkan lagi */
+    }
+    
+    .form-input {
+        height: 24px; /* Dikecilkan lagi */
+        padding: 4px 8px; /* Dikecilkan lagi */
+    }
+    
+    .register-button {
+        height: 24px; /* Dikecilkan lagi */
+        padding: 5px; /* Dikecilkan lagi */
+    }
+}
+
+/* Untuk layar sangat lebar */
+@media only screen and (min-width: 1200px) {
+    .register-form-container {
+        max-width: 600px;
+        padding: 20px 25px; /* Dikecilkan lagi */
+        margin-top: 15px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-row:nth-child(1) .form-horizontal-group:first-child {
+        padding-right: 15px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-row:nth-child(1) .form-horizontal-group:last-child {
+        padding-left: 15px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-row:nth-child(2) .form-horizontal-group:first-child {
+        padding-right: 15px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-row:nth-child(2) .form-horizontal-group:last-child {
+        padding-left: 15px; /* Dikecilkan lagi */
+    }
+    
+    .form-horizontal-row:nth-child(3) .form-horizontal-group {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    
+    .register-button {
+        width: 35%;
+        max-width: 150px; /* Dikecilkan lagi */
+    }
+    
+    .header-title {
+        margin: 20px 0 15px 0; /* Dikecilkan lagi */
+    }
+}
+
+/* FIX HEIGHT CALCULATION */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.register-container {
+    min-height: calc(100vh - 40px); /* Sesuaikan dengan navbar height */
+}

@@ -1,0 +1,200 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  background: url("./img/kantin.jpg") center/cover no-repeat;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;               /* KUNCI tinggi */
+  background-color: rgba(46, 55, 154, 0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .back-to-home {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+        }
+        
+        .back-to-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+        }
+        
+        .back-to-home i {
+            font-size: 20px;
+        }
+      
+.nav-title {
+  color: #f5f7ff;
+  font-size: 25px;
+  margin: 5;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-menu a,
+.back-button {
+  text-decoration: none;
+  color: white;
+  background-color: #ddd684;
+  padding: 5px 12px;
+  border-radius: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.back-button:hover {
+  transform: translateY(-1px);
+}
+
+.container {
+  min-height: 100vh;
+  padding-top: 70px;           /* OFFSET navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.form-container {
+  width: 400px;
+  max-width: 90%;
+  background-color: rgba(46, 55, 154, 0.95);
+  border: 1px solid #ddd684;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: white;
+  padding: 6px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.welcome-text h2,
+.welcome-text p,
+label {
+  color: #ffee2e;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 30px;
+  border: 1px solid #ffee2e;
+  box-sizing: border-box;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ddd684;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #ffee2e;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ddd684;
+  color: #ffffff;          /* INI YANG HILANG */
+  border: none;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-text {
+  color: #ffffff;          /* PUTIH */
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-link {
+  color: #ffee2e;          /* KUNING */
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}

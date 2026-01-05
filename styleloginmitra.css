@@ -1,0 +1,221 @@
+body {
+  background-image: url("./img/Makanan-Khas-Daerah-tiap-Provinsi-di-Indonesia-Serta-Daerah-Asalnya.jpg");
+  background-size: cover;
+  margin: 0; /* Remove default body margin */
+  padding: 20px; /* Add padding to create margin */
+  box-sizing: border-box; /* Include padding in total width/height */
+}
+
+#signin {
+  max-width: 70rem;
+  margin: 69px auto;
+  position: relative;
+  display: block;
+  background-color: #ff8b0d;
+  box-shadow: 0 0 5px #6b14da;
+  text-align: center;
+  margin-left: 175px;
+  margin-top: 109px;
+  border-radius: 20px;
+  font-family: Poppins;
+}
+#signin h3 {
+  text-align: center;
+  color: #005555;
+  font-size: 24px;
+  margin-top: -42px;
+  padding-left: 40rem;
+}
+#signin p {
+  text-align: center;
+  color: #005555;
+  font-size: 14px;
+  padding-left: 41rem;
+  padding-bottom: 1rem;
+}
+
+.gambar {
+  width: 100px;
+  height: 100px;
+  padding-left: 73px;
+  margin-top: 58px;
+}
+form {
+  padding-left: 10px;
+}
+fieldset {
+  margin: 10px;
+  border-radius: 20px;
+  border: none;
+  height: 25rem;
+}
+input[type="text"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+  width: 23%;
+  padding: 0.8rem;
+  margin-top: 1em;
+  margin-left: 48em;
+  border: 1px solid #6b14da;
+  background-color: #ffffff;
+  font-family: Poppins;
+  font-size: 14px;
+  color: #005555;
+  text-align: center;
+  border-radius: 40px;
+  display: block;
+}
+
+input[type="submit"] {
+  width: 10em;
+  margin-top: 2.9em;
+  margin-left: 54.5em;
+  color: #ffffff;
+  background-color: #6b14da;
+  padding: 0.8em;
+  cursor: pointer;
+  border: 1px solid #6b14da;
+  font-family: Poppins;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.form {
+  width: 64rem;
+  height: 29rem;
+  background-color: #ff8b0d;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  font-family: "Poppins";
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+h3 {
+  margin-left: 41rem;
+  margin-top: 0rem;
+}
+
+p {
+  margin-left: 41rem;
+  margin-top: 1rem;
+}
+
+img {
+  width: 24em;
+  margin-top: 32px;
+  margin-left: 37px;
+}
+
+.teks {
+  line-height: 21px;
+  margin-bottom: 40px;
+}
+
+.tombol {
+  margin-top: 1px;
+  margin-left: -1px;
+}
+.tombol a {
+  padding: 5px 11px;
+  width: 64px;
+  height: 28px;
+  background-color: #6b14da;
+  border-radius: 20px;
+  border: none;
+  font-family: poppins;
+  text-decoration: none;
+  color: white;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-image: url(./img/Makanan-Khas-Daerah-tiap-Provinsi-di-Indonesia-Serta-Daerah-Asalnya.jpg);
+    margin-top: 23px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .tombol {
+    margin-top: 1px;
+    margin-left: 16px;
+  }
+
+  .form {
+    width: 19rem;
+    height: 26rem;
+    background-color: #ff8b0d;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    font-family: "Poppins";
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  .gambar {
+    width: 120px;
+    height: 104px;
+    margin-top: 58px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="file"],
+  select,
+  textarea {
+    width: 56%;
+    padding: 0.8rem;
+    margin-top: 1em;
+    margin-left: 3.5em;
+    border: 1px solid #6b14da;
+    background-color: #ffffff;
+    font-family: Poppins;
+    font-size: 14px;
+    color: #005555;
+    text-align: center;
+    border-radius: 40px;
+    display: block;
+    height: 10px;
+  }
+
+  input[type="submit"] {
+    width: 10em;
+    margin-top: 2.9em;
+    margin-left: 6em;
+    color: #ffffff;
+    background-color: #6b14da;
+    padding: 0.8em;
+    cursor: pointer;
+    border: 1px solid #6b14da;
+    font-family: Poppins;
+    border-radius: 5px;
+  }
+
+  img {
+    margin-top: -26%;
+    margin-left: 21px;
+    width: 100%;
+  }
+  .teks {
+    line-height: 21px;
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    margin-left: 2rem;
+    margin-top: 0rem;
+  }
+
+  p {
+    margin-left: 6rem;
+    margin-top: 1rem;
+  }
+}
